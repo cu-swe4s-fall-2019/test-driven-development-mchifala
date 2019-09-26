@@ -47,11 +47,11 @@ class TestMath(unittest.TestCase):
         self.assertRaises(TypeError and
                           SystemExit, list_stdev, [3, "A"])
 
-    def test_mean_string(self):
+    def test_mean_none(self):
         self.assertRaises(TypeError and
                           SystemExit, list_mean, [3, None])
 
-    def test_mean_string(self):
+    def test_std_none(self):
         self.assertRaises(TypeError and
                           SystemExit, list_stdev, [3, None])
 
