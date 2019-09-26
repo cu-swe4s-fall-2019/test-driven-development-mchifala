@@ -12,5 +12,12 @@ before_install:
     - conda install --yes python=3.6
       
 script:
-    - bash test_viz.sh
+    - pycodestyle get_data.py
+    - pycodestyle data_viz.py
+    - pycodestyle math_lib.py
+    - pycodestyle test_math.py
+    - pycodestyle viz.py
+    - pycodestyle test_viz.py
     - python test_viz.py
+    - python test_math.py
+    - bash gen_data.sh | python viz.py --out_file "travis_test" --col_num 0 --plot_type combo
