@@ -42,6 +42,10 @@ class TestMath(unittest.TestCase):
     def test_mean_string(self):
         self.assertRaises(TypeError and
                           SystemExit, list_mean, [3,"A"])
+        
+    def test_std_string(self):
+        self.assertRaises(TypeError and
+                          SystemExit, list_stdev, [3,"A"])
 
 
 if __name__ == '__main__':
