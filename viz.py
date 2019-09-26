@@ -4,11 +4,11 @@ from data_viz import combo
 from math_lib import list_mean
 from math_lib import list_stdev
 from get_data import read_stdin_col
-import matplotlib
-matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import argparse
+import matplotlib
+matplotlib.use('Agg')
 
 
 def main(out_file, col_num, plot_type):
@@ -22,7 +22,7 @@ def main(out_file, col_num, plot_type):
 
     if plot_type == "combo":
         combo(L, out_file)
-    
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Column stats input")
@@ -36,7 +36,7 @@ if __name__ == "__main__":
                         type=int,
                         help='Column number to be analyzed',
                         required=True)
-    
+
     parser.add_argument('--plot_type',
                         type=str,
                         help='Type of plot to be generated',

@@ -1,9 +1,9 @@
 from math_lib import list_mean
 from math_lib import list_stdev
-import matplotlib
-matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')
 
 
 def boxplot(L, out_file_name):
