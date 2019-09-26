@@ -12,7 +12,7 @@ class TestMath(unittest.TestCase):
         self.assertRaises(ZeroDivisionError and
                           SystemExit, list_mean, [])
 
-    def test_mean_random(self):
+    def test_mean_random_int(self):
         for i in range(100):
             self.L = np.random.randint(0, 100, size=100)
             self.assertEqual(list_mean(self.L), np.mean(self.L))
@@ -21,10 +21,16 @@ class TestMath(unittest.TestCase):
         self.assertRaises(ZeroDivisionError and
                           SystemExit, list_stdev, [])
 
-    def test_std_random(self):
+    def test_std_random_int(self):
         for i in range(100):
             self.L = np.random.randint(0, 100, size=100)
-            self.assertEqual(list_std(self.L), np.std(self.L))
+            self.assertAlmostEqual(list_stdev(self.L), np.std(self.L))
+            
+    def test_mean_random_mix(self):
+        for i in range(100):
+            self.L = np.random.randint(0, 100, size=50)
+            self.L.append(np.random.rand(50))
+            self.assertEqual(list_mean(self.L), np.mean(self.L))
 
 
 if __name__ == '__main__':
