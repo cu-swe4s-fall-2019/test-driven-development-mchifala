@@ -8,7 +8,11 @@ import sys
 
 
 class TestMath(unittest.TestCase):
+    """
+    This class is used to test the list_mean and \
+    list_stdev methods from the math_lib module.
 
+    """
     def test_mean_empty(self):
         self.assertRaises(ZeroDivisionError and
                           SystemExit, list_mean, [])

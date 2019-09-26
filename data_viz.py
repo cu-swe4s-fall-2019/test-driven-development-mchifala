@@ -7,6 +7,19 @@ matplotlib.use('Agg')
 
 
 def boxplot(L, out_file_name):
+    """
+    This function creates a box plot displaying the data contained in the \
+    list of values and displays the mean and standard deviation of the \
+    data as the figure's title. It also saves the figure to a file.
+
+    Parameters:
+    - L(list): A list of numbers
+    - out_file_name(str): The name of the file we want to create
+
+    Returns:
+    - None, however, a file is saved.
+
+    """
     mean = list_mean(L)
     std = list_stdev(L)
     width = 3
@@ -20,6 +33,19 @@ def boxplot(L, out_file_name):
 
 
 def histogram(L, out_file_name):
+    """
+    This function creates a histogram displaying the data contained in the \
+    list of values and displays the mean and standard deviation of the \
+    data as the figure's title. It also saves the figure to a file.
+
+    Parameters:
+    - L(list): A list of numbers
+    - out_file_name(str): The name of the file we want to create
+
+    Returns:
+    - None, however, a file is saved.
+
+    """
     mean = list_mean(L)
     std = list_stdev(L)
     width = 3
@@ -33,6 +59,20 @@ def histogram(L, out_file_name):
 
 
 def combo(L, out_file_name):
+    """
+    This function creates both a histogram and box plot displaying the data \
+    contained in the list of values and displays the mean and standard \
+    deviation of the data as the figure's title. It also saves \
+    the figure to a file.
+
+    Parameters:
+    - L(list): A list of numbers
+    - out_file_name(str): The name of the file we want to create
+
+    Returns:
+    - None, however, a file is saved.
+
+    """
     width = 3
     height = 3
     mean = list_mean(L)
@@ -50,8 +90,3 @@ def combo(L, out_file_name):
                       loc="right")
     plt.tight_layout()
     plt.savefig(out_file_name)
-
-# if __name__ == '__main__':
-    # histogram(np.random.randint(0,100,100), "test.png")
-    # boxplot(np.random.randint(0,100,100), "test2.png")
-    # combo(np.random.randint(0,100,100), "test3.png")

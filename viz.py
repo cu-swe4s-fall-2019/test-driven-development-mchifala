@@ -12,6 +12,19 @@ matplotlib.use('Agg')
 
 
 def main(out_file, col_num, plot_type):
+    """
+    This script generates either a boxplot, histogram, or combo plot \
+    from a user selected column in stdin and saves it to an outfile
+
+    Parameters:
+    - outfile(str): The user-defined file name for the generated plot
+    - col_num(int): The user-defined column number of interest
+    - plot_type(str): The user-defined type of plot to generate
+
+    Returns:
+    - None, but a plot is generated and saved to a file
+
+    """
     L = read_stdin_col(col_num)
 
     if plot_type == "boxplot":
