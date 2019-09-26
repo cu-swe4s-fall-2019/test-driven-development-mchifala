@@ -16,6 +16,9 @@ class TestMath(unittest.TestCase):
         for i in range(100):
             self.L = np.random.randint(0, 100, size=100)
             self.assertEqual(list_mean(self.L), np.mean(self.L))
+            
+    def test_std_empty(self):
+        self.assertRaises(SystemExit, list_stdev, [])
         
     
     
