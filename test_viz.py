@@ -10,7 +10,11 @@ matplotlib.use('Agg')
 
 
 class TestPlots(unittest.TestCase):
+    """
+    This class is used to test the boxplot, histogram, and \
+    combo methods from the data_viz module.
 
+    """
     def test_histogram_exists(self):
         self.L = np.random.randint(0, 100, size=100)
         self.file = "histogram_test"
